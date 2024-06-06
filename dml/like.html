@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Mendapatkan elemen-elemen dengan kelas 'change-text'
+         const textElements = document.getElementsByClassName('change-text');
+          // Mendapatkan elemen-elemen dengan kelas 'change-button'
+          const buttons = document.getElementsByClassName('change-button');
+     
+          // Daftar teks yang akan ditampilkan
+          const texts = [ 
+             "Klausa LIKE ini masuk ke dalam operator",
+             "Operator yang mana?",
+             "Masuk ke dalam operator POLA/WILDCARD",
+             "Dengan menggabungkan dengan klausa WHERE untuk mencari pola yang ditentukan pada kolom",
+             "Monggo diliat dibawah ya paduka raja"
+                 ];
+                 let clickCount = 0;
+     
+                 // Menambahkan event listener untuk menangani klik pada tombol
+                 // Mengakses tombol pertama dalam koleksi (karena Anda mungkin hanya memiliki satu tombol dengan kelas tersebut)
+                 buttons[0].addEventListener('click', function() {
+                     clickCount++;
+                     const newText = texts[clickCount % texts.length];
+                     // Mengubah isi dari semua elemen dengan kelas 'change-text'
+                     for (let i = 0; i < textElements.length; i++) {
+                         textElements[i].textContent = newText;
+                     }
+                 });
+             });
+         </script>
+</head>
+<body>
+    <div class="port">
+        <button class="button-port">Like</button>
+    </div>
+
+    <div class="container2">
+        <div class="left-desc">
+            <img src="../img/teacher8.png" class="img-content">
+        </div>
+        <div class="right-desc">
+            <div class="judul-penjelasan">
+                <p>LIKE?? Kek mana</p>
+            </div>
+            <div class="penjelasan">
+                <p class="change-text">Klausa LIKE ini masuk ke dalam operator
+                </p>
+
+                <button class="change-button">></button>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="body-main-content">
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <p>2 wildcard yang sering digunakan</p>       
+            </div>
+    
+            <div class="materi-penj-content">
+              <p>Tanda persen <b>[%]</b> yang mewakili nol, satu karakter</p>
+              <p>Tanda garis bawah <b>[_]</b> yang mewakili satu karater tunggal</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/Like/l1.png">
+                <img src="../img/dml/Like/lh1.png">
+            </div>
+            <div class="materi-penj-content">
+              <p>Tujuan dari query ini adalah untuk</p>
+              <p>Mencari data pada kolom alamat di dalam tabel supir </p>
+              <p>yang mengandung frasa <b>'Street'</b></p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+          <div class="materi-pic-content">
+              <img src="../img/dml/Like/l2.png">
+              <img src="../img/dml/Like/lh2.png">
+          </div>
+          <div class="materi-penj-content">
+            <p>Dengan menggunakan wildcard % di depan huruf <b>'S'</b></p>
+            <p>Maka data yang dicari adalah kolom nama_supir yang memiliki karakter berakhiran karater <b>'S'</b></p>
+          </div>
+      </div>
+
+      <div class="materi-content">
+        <div class="materi-pic-content">
+            <img src="../img/dml/Like/l3.png">
+            <img src="../img/dml/Like/lh3.png">
+        </div>
+        <div class="materi-penj-content">
+          <p>Dengan menggunakan wildcard % di belakang angka <b>'1'</b></p>
+          <p>Maka data yang dicari adalah kolom alamat yang memiliki karakter berawalan karater <b>'1'</b></p>
+        </div>
+    </div>
+
+    <div class="materi-content">
+      <div class="materi-pic-content">
+          <img src="../img/dml/Like/l4.png">
+          <img src="../img/dml/Like/lh4.png">
+      </div>
+      <div class="materi-penj-content">
+        <p>Query ini akan menampilkan semua baris dari tabel "supir" di mana nilai kolom "alamat" </p>
+        <p>Memiliki <b>dua karakter</b> sebelum karakter 't' pada akhirannya</p>
+        <p>Karakter <b>'__'</b> menunjukkan dua karakter yang diikuti oleh karakter 't' di akhir nilai kolom</p>
+      </div>
+    </div>
+
+    <div class="materi-content">
+      <div class="materi-pic-content">
+          <img src="../img/dml/Like/l5.png">
+          <img src="../img/dml/Like/lh5.png">
+      </div>
+      <div class="materi-penj-content">
+        <p>Query ini akan menampilkan semua baris dari tabel "supir" di mana nilai kolom "alamat"</p>
+        <p>Dimulai dengan digit '1' diikuti oleh dua karakter apa pun</p>
+      </div>
+    </div>
+
+    <div class="materi-content">
+      <div class="materi-pic-content">
+          <img src="../img/dml/Like/l6.png">
+          <img src="../img/dml/Like/lh6.jpeg">
+      </div>
+      <div class="materi-penj-content">
+        <p>[] merupakan wildcard lain selain yang sering digunakan itu</p>
+        <p>Query ini akan menampilkan semua baris dari tabel "penanggung_jawab" di mana nilai kolom "nama_pj"</p>
+        <p>Dimulai dengan karakter 'E' atau 'H', dan diikuti oleh nol atau lebih karakter lainnya.</p>
+      </div>
+    </div>
+
+    <div class="materi-content">
+      <div class="materi-pic-content">
+          <img src="../img/dml/Like/l7.png">
+          <img src="../img/dml/Like/lh7.jpeg">
+      </div>
+      <div class="materi-penj-content">
+        <p>^ merupakan wildcard lainnya dari 3 wildcard diatas</p>
+        <p>Query ini akan mengembalikan semua baris dari tabel "penanggung_jawab" di mana nilai kolom "nama_pj"</p>
+        <p><b>Tidak dimulai</b> dengan karakter 'S'</p>
+      </div>
+    </div>
+
+  </div>
+
+    </div>
+
+    <div class="other-content">    
+        <div class="judul-other-content">
+            <p>Materi-Materi Yang Berhubungan</p>
+        </div>
+        <div class="inside-main-content">
+          <div class="sub-main-content">
+            <a href="../dml/where.html"><img src="../img/dml/where.png" class="img-content2"></a>
+            <p>WHERE</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/and.html"><img src="../img/dml/and.png" class="img-content2"></a>
+            <p>AND</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/or.html"><img src="../img/dml/or.png" class="img-content2"></a>
+            <p>OR</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/order.html"><img src="../img/dml/order.png" class="img-content2"></a>
+            <p>ORDER</p>
+          </div>
+        </div>
+    
+        <div class="inside-main-content">
+          <div class="sub-main-content">
+            <a href="../dml/group.html"><img src="../img/dml/gorup.png" class="img-content2"></a>
+            <p>GROUP</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/agregator.html"><img src="../img/dml/agregator.png" class="img-content2"></a>
+            <p>AGREGATOR</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/like.html"><img src="../img/dml/like.png" class="img-content2"></a>
+            <p>LIKE</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/operator.html"><img src="../img/dml/operator.png" class="img-content2"></a>
+            <p>OPERATOR</p>
+          </div>
+        </div>
+    
+      </div>
+
+
+
+</body>
+</html>

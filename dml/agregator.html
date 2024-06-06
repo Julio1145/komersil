@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregator</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+ document.addEventListener('DOMContentLoaded', function() {
+            // Mendapatkan elemen-elemen dengan kelas 'change-text'
+            const textElements = document.getElementsByClassName('change-text');
+            // Mendapatkan elemen-elemen dengan kelas 'change-button'
+            const buttons = document.getElementsByClassName('change-button');
+
+            // Daftar teks yang akan ditampilkan
+            const texts = [ 
+                "Agregator ini digunakan untuk melakukan perhitungan pada sekelompok nilai dan mengembalikan hasil agregat, seperti jumlah, rata-rata, nilai maksimum, nilai minimum, dan sebagainya",
+                "Agregator ini juga berhubungan dengan penggunaan perintah SELECT",
+                "Disini akan dijelaskan secara singkat gimana cara memakai agregator yang sering dipakai",
+                "Monggo diliat dibawah ya"
+            ];
+            let clickCount = 0;
+
+            // Menambahkan event listener untuk menangani klik pada tombol
+            // Mengakses tombol pertama dalam koleksi (karena Anda mungkin hanya memiliki satu tombol dengan kelas tersebut)
+            buttons[0].addEventListener('click', function() {
+                clickCount++;
+                const newText = texts[clickCount % texts.length];
+                // Mengubah isi dari semua elemen dengan kelas 'change-text'
+                for (let i = 0; i < textElements.length; i++) {
+                    textElements[i].textContent = newText;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="port">
+        <button class="button-port">Agregator</button>
+    </div>
+
+    <div class="container2">
+        <div class="left-desc">
+            <img src="../img/teacher4.png" class="img-content">
+        </div>
+        <div class="right-desc">
+            <div class="judul-penjelasan">
+                <p>Apasih Agregator Tu Bang</p>
+            </div>
+            <div class="penjelasan">
+                <p class="change-text">Agregator ini digunakan untuk melakukan perhitungan pada sekelompok nilai dan mengembalikan hasil agregat, seperti jumlah, rata-rata, nilai maksimum, nilai minimum, dan sebagainya</p>
+
+                <button class="change-button">></button>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="body-main-content">
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/Agregator/ag1.png">        
+                <img src="../img/dml/Agregator/agh1.jpeg">        
+            </div>
+    
+            <div class="materi-penj-content">
+                <p>Menggunakan klausa <b>SUM</b> untuk menghitung total dari gaji yang berada di tabel supir</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/Agregator/ag2.png">
+                <img src="../img/dml/Agregator/agh2.png">
+            </div>
+            <div class="materi-penj-content">
+                <p>Penggunaan klausa <b>AVG</b> atau <b>AVERAGE</b> bertujuan untuk menghitung nilai <b>rata-rata</b></p>
+                <p>Pada contoh gambar di sebelah kiri, perintah tersebut bertujuan untuk menghitung <b>rata-rata</b> gaji yang terdapat di tabel <b>penanggung_jawab</b></p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/Agregator/ag3.png">
+                <img src="../img/dml/Agregator/agh3.png">
+            </div>
+            <div class="materi-penj-content">
+                <p>Disini penggunaan klausa <b>COUNT</b> diperuntukkan untuk menghitung <b>jumlah baris atau nilai</b> dalam suatu kolom</p>
+                <p>Sebagai contoh gambar disamping, <b>COUNT</b> digunakan untuk menghitung jumlah nilai yang ada di tabel penggunaan dengan kolom tanggal_pemakaian</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/Agregator/ag4.png">
+                <img src="../img/dml/Agregator/agh4.png">
+            </div>
+            <div class="materi-penj-content">
+                <p>Contoh yang ke-empat, penggunaan klausa <b>MAX</b></p>
+                <p>Seperti namanya sendiri, <b>MAX</b> itu mengambil data dengan nilai paling tinggi diantara nilai lainnya</p>
+                <p>Sebagai contoh pada gambar di samping, klausa <b>MAX</b> dipakai untuk mencari data paling tinggi dari kolom gaji yang ada di tabel supir</p>
+            </div>
+        </div>
+        
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/Agregator/ag5.png">
+                <img src="../img/dml/Agregator/agh5.png">
+            </div>
+            <div class="materi-penj-content">
+                <p>Contoh yang ke-lima, penggunaan klausa <b>MIN</b></p>
+                <p>Peruntukkan nya hampir sama seperti <b>MAX</b>, perbedaannya adalah <b>MIN</b> mengambil data terkecil atau terendah</p>
+                <p>Sebagai contoh pada gambar di samping, klausa <b>MIN</b> dipakai untuk mencari data paling rendah dari kolom gaji yang ada di tabel penanggung_jawab</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="other-content">    
+        <div class="judul-other-content">
+            <p>Materi-Materi Yang Berhubungan</p>
+        </div>
+        <div class="inside-main-content">
+          <div class="sub-main-content">
+            <a href="../dml/select.html"><img src="../img/dml/select.png" class="img-content2"></a>
+            <p> SELECT </p>
+          </div>
+        </div>
+    
+      </div>
+
+
+
+</body>
+</html>

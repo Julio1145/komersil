@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+ document.addEventListener('DOMContentLoaded', function() {
+            // Mendapatkan elemen-elemen dengan kelas 'change-text'
+            const textElements = document.getElementsByClassName('change-text');
+            // Mendapatkan elemen-elemen dengan kelas 'change-button'
+            const buttons = document.getElementsByClassName('change-button');
+
+            // Daftar teks yang akan ditampilkan
+            const texts = [ 
+                "Sebuah group sudah pasti anggotanya berkelompok",
+                "Maka dari itu, klausa GROUP ini digunakan untuk mengelompokkan data seusai perintah yang diberikan",
+                "Monggo diliat dibawah ya"
+            ];
+            let clickCount = 0;
+
+            // Menambahkan event listener untuk menangani klik pada tombol
+            // Mengakses tombol pertama dalam koleksi (karena Anda mungkin hanya memiliki satu tombol dengan kelas tersebut)
+            buttons[0].addEventListener('click', function() {
+                clickCount++;
+                const newText = texts[clickCount % texts.length];
+                // Mengubah isi dari semua elemen dengan kelas 'change-text'
+                for (let i = 0; i < textElements.length; i++) {
+                    textElements[i].textContent = newText;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="port">
+        <button class="button-port">Group</button>
+    </div>
+
+    <div class="container2">
+        <div class="left-desc">
+            <img src="../img/teacher6.png" class="img-content">
+        </div>
+        <div class="right-desc">
+            <div class="judul-penjelasan">
+                <p>Group?? Apaan sih</p>
+            </div>
+            <div class="penjelasan">
+                <p class="change-text">Dari namanya sudah terlihat, 'GROUP'</p>
+
+                <button class="change-button">></button>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="body-main-content">
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/Group/gr1.png">        
+                <img src="../img/dml/Group/grH1.jpeg">        
+            </div>
+    
+            <div class="materi-penj-content">
+              <p>Query SQL ini akan mengambil semua kolom dari tabel "penanggung_jawab", kemudian </p>
+              <p>Mengelompokkan hasil berdasarkan nilai kolom "gaji", dan mengurutkan hasil berdasarkan nilai kolom "id_pj"</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="other-content">    
+        <div class="judul-other-content">
+            <p>Materi-Materi Yang Berhubungan</p>
+        </div>
+        <div class="inside-main-content">
+          <div class="sub-main-content">
+            <a href="../dml/select.html"><img src="../img/dml/select.png" class="img-content2"></a>
+            <p> SELECT </p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/order.html"><img src="../img/dml/order.png" class="img-content2"></a>
+            <p>ORDER</p>
+          </div>
+        </div>
+    
+      </div>
+
+
+
+</body>
+</html>

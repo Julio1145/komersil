@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alter</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+                 // Mendapatkan elemen-elemen dengan kelas 'change-text'
+                 const textElements = document.getElementsByClassName('change-text');
+                 // Mendapatkan elemen-elemen dengan kelas 'change-button'
+                 const buttons = document.getElementsByClassName('change-button');
+     
+                 // Daftar teks yang akan ditampilkan
+                 const texts = [ 
+                     "Alter EGOO",
+                     "Klausa Alter ini digunakan untuk mengubah data kolom pada sebuah database",
+                     "Monggo diliat dibawah ya paduka raja"
+                 ];
+                 let clickCount = 0;
+     
+                 // Menambahkan event listener untuk menangani klik pada tombol
+                 // Mengakses tombol pertama dalam koleksi (karena Anda mungkin hanya memiliki satu tombol dengan kelas tersebut)
+                 buttons[0].addEventListener('click', function() {
+                     clickCount++;
+                     const newText = texts[clickCount % texts.length];
+                     // Mengubah isi dari semua elemen dengan kelas 'change-text'
+                     for (let i = 0; i < textElements.length; i++) {
+                         textElements[i].textContent = newText;
+                     }
+                 });
+             });
+         </script>
+</head>
+<body>
+    <div class="port">
+        <button class="button-port">Alter</button>
+    </div>
+
+    <div class="container2">
+        <div class="left-desc">
+            <img src="../img/teacher10.png" class="img-content">
+        </div>
+        <div class="right-desc">
+            <div class="judul-penjelasan">
+                <p>Alter</p>
+            </div>
+            <div class="penjelasan">
+                <p class="change-text">Alter EGOO
+                </p>
+
+                <button class="change-button">></button>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="body-main-content">
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/ddl/Alter/at1.png">
+            </div>
+    
+            <div class="materi-penj-content">
+                <p>Query di samping ini diperuntukkan untuk <b>RENAME</b> nama kolom dalam database</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/ddl/Alter/at2.png">
+            </div>
+    
+            <div class="materi-penj-content">
+                <p>Query di samping ini diperuntukkan untuk <b>RENAME</b> nama <b>atribut</b> dalam database</p>
+                <p>Atribut nomor_polisi diubah menjadi <b>nopol</b> dengan tipe data varchar</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <p>Format Multiple</p>
+            </div>
+    
+            <div class="materi-penj-content">
+                <p>ADD</p>
+                <p>CHANGE</p>
+                <p>MODIFY</p>
+                <p>DROP</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/ddl/Alter/at3.png">
+            </div>
+    
+            <div class="materi-penj-content">
+                <p>Menambahkan kolom harga dengan tipe data INT ke tabel kendaraan</p>
+                <p>Perintah ini akan menambahkan kolom baru bernama harga dengan tipe data integer ke tabel kendaraan</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/ddl/Alter/at4.png">
+            </div>
+    
+            <div class="materi-penj-content">
+                <p>Perintah ini akan mengganti nama kolom harga menjadi contoh</p>
+                <p>Dan mempertahankan tipe data INT di tabel kendaraan</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/ddl/Alter/at5.png">
+            </div>
+    
+            <div class="materi-penj-content">
+                <p>Mengubah tipe data kolom contoh dari INT menjadi VARCHAR(255) di tabel kendaraan</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/ddl/Alter/at6.png">
+            </div>
+    
+            <div class="materi-penj-content">
+                <p>Menghapus Column Contoh</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/ddl/Alter/at7.png">
+            </div>
+    
+            <div class="materi-penj-content">
+                <p>Menghapus Primary Key di tabel penggunaan</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="other-content">    
+        <div class="judul-other-content">
+            <p>Materi-Materi Yang Berhubungan</p>
+        </div>
+    
+        <div class="inside-main-content">
+            <div class="sub-main-content">
+                <a href="../ddl/create.html"><img src="../img/ddl/create.png" class="img-content2"></a>
+                <p>CREATE</p>
+              </div>
+              <div class="sub-main-content">
+                <a href="../ddl/drop.html"><img src="../img/ddl/drop.png" class="img-content2"></a>
+                <p>DROP</p>
+              </div>
+        </div>
+    
+      </div>
+
+
+
+</body>
+</html>

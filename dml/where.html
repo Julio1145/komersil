@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>where</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Mendapatkan elemen-elemen dengan kelas 'change-text'
+          const textElements = document.getElementsByClassName('change-text');
+          // Mendapatkan elemen-elemen dengan kelas 'change-button'
+          const buttons = document.getElementsByClassName('change-button');
+
+          // Daftar teks yang akan ditampilkan
+          const texts = [ 
+              "Klausa WHERE ini digunakan saat kamu ingin menggunakan kondisi",
+              "Tentu saja WHERE akan digunakan dengan klausa lainnya",
+              "Monggo diliat dibawah ya"
+          ];
+          let clickCount = 0;
+
+          // Menambahkan event listener untuk menangani klik pada tombol
+          // Mengakses tombol pertama dalam koleksi (karena Anda mungkin hanya memiliki satu tombol dengan kelas tersebut)
+          buttons[0].addEventListener('click', function() {
+              clickCount++;
+              const newText = texts[clickCount % texts.length];
+              // Mengubah isi dari semua elemen dengan kelas 'change-text'
+              for (let i = 0; i < textElements.length; i++) {
+                  textElements[i].textContent = newText;
+              }
+          });
+      });
+  </script>
+</head>
+<body>
+    <div class="port">
+        <button class="button-port">Where</button>
+    </div>
+
+    <div class="container2">
+        <div class="left-desc">
+            <img src="../img/teacher12.png" class="img-content">
+        </div>
+        <div class="right-desc">
+            <div class="judul-penjelasan">
+                <p>Where??? Dimana</p>
+            </div>
+            <div class="penjelasan">
+                <p class="change-text">Klausa WHERE ini digunakan saat kamu ingin menggunakan kondisi
+                </p>
+
+                <button class="change-button">></button>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="body-main-content">
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/Where/wh1.png">        
+                <img src="../img/dml/Where/..">        
+            </div>
+    
+            <div class="materi-penj-content">
+              <p>Query SQL untuk memilih semua kolom dari tabel "supir" di mana nilai kolom</p>
+              <p>"id_supir" adalah 20</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/Where/wh2.png">
+                <img src="">
+            </div>
+            <div class="materi-penj-content">
+              <p>Mengupdate nilai kolom "gaji" menjadi 700,000 pada tabel "penanggung_jawab"</p>
+              <p>Di mana nilai kolom "id_pj" adalah 1</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+
+            </div>
+            <div class="materi-penj-content">
+              <p>Contoh klausa WHERE lainnya terdapat pada materi-materi di bawah ini</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="other-content">    
+        <div class="judul-other-content">
+            <p>Materi-Materi Yang Berhubungan</p>
+        </div>
+        <div class="inside-main-content">
+          <div class="sub-main-content">
+            <a href="../dml/select.html"><img src="../img/dml/select.png" class="img-content2"></a>
+            <p> SELECT </p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/update.html"><img src="../img/dml/update.png" class="img-content2"></a>
+            <p>UPDATE</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/delete.html"><img src="../img/dml/delete.png" class="img-content2"></a>
+            <p>DELETE</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/and.html"><img src="../img/dml/and.png" class="img-content2"></a>
+            <p>AND</p>
+          </div>
+        </div>
+    
+        <div class="inside-main-content">
+          <div class="sub-main-content">
+            <a href="../dml/or.html"><img src="../img/dml/or.png" class="img-content2"></a>
+            <p>OR</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/like.html"><img src="../img/dml/like.png" class="img-content2"></a>
+            <p>LIKE</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/operator.html"><img src="../img/dml/operator.png" class="img-content2"></a>
+            <p>OPERATOR</p>
+          </div>
+          </div>
+        </div>
+    
+      </div>
+
+
+
+</body>
+</html>

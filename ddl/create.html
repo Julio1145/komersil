@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+                 // Mendapatkan elemen-elemen dengan kelas 'change-text'
+                 const textElements = document.getElementsByClassName('change-text');
+                 // Mendapatkan elemen-elemen dengan kelas 'change-button'
+                 const buttons = document.getElementsByClassName('change-button');
+     
+                 // Daftar teks yang akan ditampilkan
+                 const texts = [ 
+                     "Pembentukkan",
+                     "Klausa CREATE ini digunakan untuk membentuk sebuah database",
+                     "Selain membentuk sebuah database, CREATE juga bisa untuk membuat tabel yang terdapat di dalam database",
+                     "Monggo diliat dibawah ya paduka raja"
+                 ];
+                 let clickCount = 0;
+     
+                 // Menambahkan event listener untuk menangani klik pada tombol
+                 // Mengakses tombol pertama dalam koleksi (karena Anda mungkin hanya memiliki satu tombol dengan kelas tersebut)
+                 buttons[0].addEventListener('click', function() {
+                     clickCount++;
+                     const newText = texts[clickCount % texts.length];
+                     // Mengubah isi dari semua elemen dengan kelas 'change-text'
+                     for (let i = 0; i < textElements.length; i++) {
+                         textElements[i].textContent = newText;
+                     }
+                 });
+             });
+         </script>
+</head>
+<body>
+    <div class="port">
+        <button class="button-port">Create</button>
+    </div>
+
+    <div class="container2">
+        <div class="left-desc">
+            <img src="../img/teacher14.jpg" class="img-content-gojo">
+        </div>
+        <div class="right-desc">
+            <div class="judul-penjelasan">
+                <p>CREATEEE</p>
+            </div>
+            <div class="penjelasan">
+                <p class="change-text">Pembentukkan
+                </p>
+
+                <button class="change-button">></button>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="body-main-content">
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <p>CREATE</p>      
+            </div>
+    
+            <div class="materi-penj-content">
+              <p>DATABASE</p>
+              <p>KOLOM</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/ddl/Create/cr1.png" >
+                <img src="../img/ddl/Create/crh1.jpg">
+            </div>
+            <div class="materi-penj-content">
+                <p>Query disamping ini diperuntukkan untuk membentuk tabel yang ada di dalam database</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+          <div class="materi-pic-content">
+              <img src="../img/ddl/Create/cr2.png">
+          </div>
+          <div class="materi-penj-content">
+            <p>Query disamping diperuntukkan untuk membentuk sebuah database dalam SQL</p>
+          </div>
+      </div>
+
+    </div>
+
+    <div class="other-content">    
+        <div class="judul-other-content">
+            <p>Materi-Materi Yang Berhubungan</p>
+        </div>
+    
+        <div class="inside-main-content">
+              <div class="sub-main-content">
+                <a href="../ddl/alter.html"><img src="../img/ddl/alter.png" class="img-content2"></a>
+                <p>ALTER</p>
+              </div>
+              <div class="sub-main-content">
+                <a href="../ddl/drop.html"><img src="../img/ddl/drop.png" class="img-content2"></a>
+                <p>DROP</p>
+              </div>
+        </div>
+    
+      </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+                 // Mendapatkan elemen-elemen dengan kelas 'change-text'
+                 const textElements = document.getElementsByClassName('change-text');
+                 // Mendapatkan elemen-elemen dengan kelas 'change-button'
+                 const buttons = document.getElementsByClassName('change-button');
+     
+                 // Daftar teks yang akan ditampilkan
+                 const texts = [ 
+                     "JATUH",
+                     "Klausa DROP ini digunakan untuk menghapus sebuah database",
+                     "Monggo diliat dibawah ya paduka raja"
+                 ];
+                 let clickCount = 0;
+     
+                 // Menambahkan event listener untuk menangani klik pada tombol
+                 // Mengakses tombol pertama dalam koleksi (karena Anda mungkin hanya memiliki satu tombol dengan kelas tersebut)
+                 buttons[0].addEventListener('click', function() {
+                     clickCount++;
+                     const newText = texts[clickCount % texts.length];
+                     // Mengubah isi dari semua elemen dengan kelas 'change-text'
+                     for (let i = 0; i < textElements.length; i++) {
+                         textElements[i].textContent = newText;
+                     }
+                 });
+             });
+         </script>
+</head>
+<body>
+    <div class="port">
+        <button class="button-port">Drop</button>
+    </div>
+
+    <div class="container2">
+        <div class="left-desc">
+            <img src="../img/teacher14.jpg" class="img-content-gojo">
+        </div>
+        <div class="right-desc">
+            <div class="judul-penjelasan">
+                <p>DROPP</p>
+            </div>
+            <div class="penjelasan">
+                <p class="change-text">JATUH
+                </p>
+
+                <button class="change-button">></button>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="body-main-content">
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/ddl/Drop/dr1.png">
+            </div>
+    
+            <div class="materi-penj-content">
+                <p>Query di samping ini diperuntukkan untuk menghapus database komerisal</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="other-content">    
+        <div class="judul-other-content">
+            <p>Materi-Materi Yang Berhubungan</p>
+        </div>
+    
+        <div class="inside-main-content">
+            <div class="sub-main-content">
+                <a href="../ddl/create.html"><img src="../img/ddl/create.png" class="img-content2"></a>
+                <p>CREATE</p>
+              </div>
+              <div class="sub-main-content">
+                <a href="../ddl/alter.html"><img src="../img/ddl/alter.png" class="img-content2"></a>
+                <p>ALTER</p>
+              </div>
+        </div>
+    
+      </div>
+
+
+
+</body>
+</html>

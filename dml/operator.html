@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+ document.addEventListener('DOMContentLoaded', function() {
+            // Mendapatkan elemen-elemen dengan kelas 'change-text'
+            const textElements = document.getElementsByClassName('change-text');
+            // Mendapatkan elemen-elemen dengan kelas 'change-button'
+            const buttons = document.getElementsByClassName('change-button');
+
+            // Daftar teks yang akan ditampilkan
+            const texts = [ 
+                "Halo Operator",
+                "Ini Operator",
+                "Operator dalam SQL memiliki berbagai fungsi yang digunakan untuk melakukan operasi perbandingan, aritmetika",
+                "Operator ini dibagi menjadi 3, yaitu",
+                "Aritmatika, Perbandingan, dan Pola",
+                "Perbandingan Pola itu sama dengan LIKE, maka materi nya akan ada di halaman LIKE",
+                "Monggo diliat dibawah ya paduka raja"
+            ];
+            let clickCount = 0;
+
+            // Menambahkan event listener untuk menangani klik pada tombol
+            // Mengakses tombol pertama dalam koleksi (karena Anda mungkin hanya memiliki satu tombol dengan kelas tersebut)
+            buttons[0].addEventListener('click', function() {
+                clickCount++;
+                const newText = texts[clickCount % texts.length];
+                // Mengubah isi dari semua elemen dengan kelas 'change-text'
+                for (let i = 0; i < textElements.length; i++) {
+                    textElements[i].textContent = newText;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="port">
+        <button class="button-port">Operator</button>
+    </div>
+
+    <div class="container2">
+        <div class="left-desc">
+            <img src="../img/teacher6.png" class="img-content">
+        </div>
+        <div class="right-desc">
+            <div class="judul-penjelasan">
+                <p>Operatooorrr</p>
+            </div>
+            <div class="penjelasan">
+                <p class="change-text">Halo Operator</p>
+
+                <button class="change-button">></button>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="body-main-content">
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <p>Operator Aritmatika</p>
+            </div>
+    
+            <div class="materi-penj-content">
+                <p>Penambahan</p>
+                <p>Pengurangan</p>
+                <p>Pembagian</p>
+                <p>Perkalian</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+          <div class="materi-pic-content">
+              <img src="../img/dml/Operator/op1.png">        
+              <img src="../img/dml/Operator/oph1.png">        
+          </div>
+  
+          <div class="materi-penj-content">
+            <p>Melakukan penambahan pada tabel supir di kolom gaji, dengan penambahan sebesar 500.000</p>
+            <p>Nama dari kolom gaji akan berubah menjadi kolom gaji_akhir akibat klausa <b>AS</b> </p>
+          </div>
+      </div>
+
+      <div class="materi-content">
+        <div class="materi-pic-content">
+            <img src="../img/dml/Operator/op2.png">        
+            <img src="../img/dml/Operator/oph2.png">        
+        </div>
+
+        <div class="materi-penj-content">
+            <p>Melakukan pengurangan pada tabel penanggung_jawab di kolom gaji, dengan pengurangan sebesar 200.000</p>
+            <p>Nama dari kolom gaji akan berubah menjadi kolom gaji_bersih akibat klausa <b>AS</b> </p>
+        </div>
+    </div>
+
+    <div class="materi-content">
+        <div class="materi-pic-content">
+            <img src="../img/dml/Operator/op3.png">        
+            <img src="../img/dml/Operator/oph3.png">        
+        </div>
+
+        <div class="materi-penj-content">
+            <p>Melakukan perkalian pada data kolom gaji yang ada di tabel penanggung_jawab</p>
+            <p>Data yang dipanggil adalah kolom gaji serta kolom bonus_bulanan yang berasal dari hasil perkalian</p>
+        </div>
+    </div>
+
+    <div class="materi-content">
+        <div class="materi-pic-content">
+            <img src="../img/dml/Operator/op4.png">        
+            <img src="../img/dml/Operator/oph4.png">        
+        </div>
+
+        <div class="materi-penj-content">
+            <p>Melakukan pembagian pada data kolom gaji yang ada di tabel penanggung_jawab</p>
+            <p>Data yang dipanggil adalah kolom gaji serta kolom potongan_admin yang berasa dari hasil pembagian</p>
+        </div>
+    </div>
+
+    <div class="materi-content">
+        <div class="materi-pic-content">
+            <p>Operator Perbandingan</p>
+        </div>
+
+        <div class="materi-penj-content">
+            <p>Equal To</p>
+            <p>Not Equal To</p>
+            <p>Less Than</p>
+            <p>Greather Than</p>
+            <p>Less Than or Equal To</p>
+            <p>Greater Than or Equal To</p>
+            <p>BETWEEN</p>
+        </div>
+    </div>
+
+    <div class="materi-content">
+        <div class="materi-pic-content">
+            <img src="../img/dml/Operator/op5.png">        
+            <img src="../img/dml/Operator/oph5.png">        
+        </div>
+
+        <div class="materi-penj-content">
+            <p>Memanggil semua kolom data dimana nilai kolom dari </p>
+            <p>kolom gaji = 1.250.000</p>
+        </div>
+    </div>
+
+    <div class="materi-content">
+        <div class="materi-pic-content">
+            <img src="../img/dml/Operator/op6.png">        
+            <img src="../img/dml/Operator/oph6.png">        
+        </div>
+
+        <div class="materi-penj-content">
+            <p>Memanggil semua kolom data dimana nilai kolom dari</p>
+            <p>kolom gaji <b>!=</b> atau <b>'Tidak Sama Dengan'</b> 1.250.000</p>
+        </div>
+    </div>
+
+    <div class="materi-content">
+        <div class="materi-pic-content">
+            <img src="../img/dml/Operator/op7.png">        
+            <img src="../img/dml/Operator/oph7.png">        
+        </div>
+
+        <div class="materi-penj-content">
+            <p>Memanggil semua kolom data dimana nilai kolom dari</p>
+            <p>id_pj <b>></b> atau <b>lebih dari</b> 10 </p>
+        </div>
+    </div>
+
+    <div class="materi-content">
+        <div class="materi-pic-content">
+            <img src="../img/dml/Operator/op8.png">        
+            <img src="../img/dml/Operator/oph8.png">        
+        </div>
+
+        <div class="materi-penj-content">
+            <p>Memanggil semua kolom data dimana nilai kolom dari</p>
+            <p>id_supir <b><</b> atau <b>kurang dari</b> 10 </p>
+        </div>
+    </div>
+
+    <div class="materi-content">
+        <div class="materi-pic-content">
+            <img src="../img/dml/Operator/op9.png">        
+            <img src="../img/dml/Operator/oph9.png">        
+        </div>
+
+        <div class="materi-penj-content">
+            <p>Memanggil semua kolom data dari tabel penggunaan</p>
+            <p>Dimana nilai dari kolom id_pj harus <b>sama dengan kurang dari</b> 5</p>
+            <p>Artinya kolom data yang terpanggil harus mulai dari <b>id_pj 5</b> menuju <b>nilai paling kecil</b></p>
+        </div>
+    </div>
+
+    <div class="materi-content">
+        <div class="materi-pic-content">
+            <img src="../img/dml/Operator/op10.png">        
+            <img src="../img/dml/Operator/oph10.png">        
+        </div>
+
+        <div class="materi-penj-content">
+            <p>Operator perbandingan ini hampir sama seperti operator perbandingan di atas</p>
+            <p>Perbedaannya operator ini akan memunculkan sesuai nilai id_pj mulai dari 6</p>
+            <p>sampai nilai terbesar</p>
+        </div>
+    </div>
+
+    <div class="materi-content">
+        <div class="materi-pic-content">
+            <img src="../img/dml/Operator/op11.png">              
+        </div>
+
+        <div class="materi-penj-content">
+            <p>Di contoh query menggunakan klausa <b>BETWEEN</b> ini</p>
+            <p>Diperuntukkan untuk mencari kolom data id_pj yang memiliki nilai</p>
+            <p>diantara 20 dan 30</p>
+            <p>Klausa <b>BETWEEN</b> ini juga digabungkan dengan klausa <b>AND</b></p>
+        </div>
+    </div>
+
+    <div class="materi-content">
+        <div class="materi-pic-content">
+            <p>WEITSS</p>        
+        </div>
+
+        <div class="materi-penj-content">
+            <p>Klausa ini juga bisa digunakan di klausa UPDATE loh wowowowowowow, ayo cek🔥🔥🔥</p>
+        </div>
+    </div>
+
+  </div>
+    </div>
+
+    <div class="other-content">    
+        <div class="judul-other-content">
+            <p>Materi-Materi Yang Berhubungan</p>
+        </div>
+
+        <div class="inside-main-content">
+            <div class="sub-main-content">
+                <a href="../dml/update.html"><img src="../img/dml/update.png" class="img-content2"></a>
+                <p>UPDATE</p>
+              </div>
+          </div>
+    </div>
+</body>
+</html>

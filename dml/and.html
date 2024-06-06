@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AND</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+ document.addEventListener('DOMContentLoaded', function() {
+            // Mendapatkan elemen-elemen dengan kelas 'change-text'
+            const textElements = document.getElementsByClassName('change-text');
+            // Mendapatkan elemen-elemen dengan kelas 'change-button'
+            const buttons = document.getElementsByClassName('change-button');
+
+            // Daftar teks yang akan ditampilkan
+            const texts = [ 
+                "AND atau bahasa Indo nya 'dan', digunakan untuk menggabungkan 2 atau lebih dari sebuah kondisi",
+                "Karena dia AND, maka dia hanya akan mengahasilkan hasil TRUE",
+                "Semua kondisi harus terpenuhi atau bernilai TRUE",
+                "Jika salah satu kondisi tidak terpenuhi, maka data tidak akan ditampilkan",
+                "Sering kali klausa ini dikombinasikan dengan klausa WHERE",
+                "Monggo diliat dibawah ya"
+            ];
+            let clickCount = 0;
+
+            // Menambahkan event listener untuk menangani klik pada tombol
+            // Mengakses tombol pertama dalam koleksi (karena Anda mungkin hanya memiliki satu tombol dengan kelas tersebut)
+            buttons[0].addEventListener('click', function() {
+                clickCount++;
+                const newText = texts[clickCount % texts.length];
+                // Mengubah isi dari semua elemen dengan kelas 'change-text'
+                for (let i = 0; i < textElements.length; i++) {
+                    textElements[i].textContent = newText;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="port">
+        <button class="button-port">AND</button>
+    </div>
+
+    <div class="container2">
+        <div class="left-desc">
+            <img src="../img/teacher5.png" class="img-content">
+        </div>
+        <div class="right-desc">
+            <div class="judul-penjelasan">
+                <p>AND??? Apaan tu</p>
+            </div>
+            <div class="penjelasan">
+                <p class="change-text">AND atau bahasa Indo nya 'dan', digunakan untuk menggabungkan 2 atau lebih dari sebuah kondisi</p>
+
+                <button class="change-button">></button>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="body-main-content">
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/And/and1.png">        
+                <img src="../img/dml/And/andH1.jpeg">        
+            </div>
+    
+            <div class="materi-penj-content">
+              <p>Menggunakan klausa <b>AND</b> yang dikombinasikan dengan klausa <b>SELECT</b> serta <b>WHERE</b></p>
+              <p>Berdasarkan gambar disamping, perintah diperuntukkan untuk mengambil data dari tabel supir</p>
+              <p>Dimana nilai dari <b>id_supir</b> harus lebih dari 5</p>
+              <p>dan bulan dari <b>tanggal_masuk</b> harus lebih dari bulan ke-4 </p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/And/and2.png">
+                <img src="../img/dml/And/andH2.jpeg">
+            </div>
+            <div class="materi-penj-content">
+              <p>Menggunakan klausa <b>AND</b> yang dikombinasikan dengan klausa <b>DELETE</b> serta <b>WHERE</b></p>
+              <p>Berdasarkan gambar disamping, perintah diperuntukkan untuk menghapus data dari tabel <b>penggunaan</b></p>
+              <p>Dimana nilai dari <b>id_pj</b> harus sama dengan 10</p>
+              <p>dan <b>id_supir</b> harus sama dengan 20 </p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/And/and3.png">
+                <img src="../img/dml/And/andh3.png">
+            </div>
+            <div class="materi-penj-content">
+              <p>Menggunakan Klausa <b>AND</b> pada klausa <b>LIKE</b></p>
+              <p>Query ini akan memanggil semua kolom data yang memiliki data pada kolom nama_supir</p>
+              <p>Yang berakhiran dengan karakter S dan N</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="other-content">    
+        <div class="judul-other-content">
+            <p>Materi-Materi Yang Berhubungan</p>
+        </div>
+        <div class="inside-main-content">
+          <div class="sub-main-content">
+            <a href="../dml/select.html"><img src="../img/dml/select.png" class="img-content2"></a>
+            <p> SELECT </p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/where.html"><img src="../img/dml/where.png" class="img-content2"></a>
+            <p>WHERE</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/delete.html"><img src="../img/dml/delete.png" class="img-content2"></a>
+            <p>DELETE</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/update.html"><img src="../img/dml/update.png" class="img-content2"></a>
+            <p>UPDATE</p>
+          </div>
+      </div>
+        <div class="inside-main-content">
+          <div class="sub-main-content">
+            <a href="../dml/like.html"><img src="../img/dml/like.png" class="img-content2"></a>
+            <p>LIKE</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>

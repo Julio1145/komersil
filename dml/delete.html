@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+                 // Mendapatkan elemen-elemen dengan kelas 'change-text'
+                 const textElements = document.getElementsByClassName('change-text');
+                 // Mendapatkan elemen-elemen dengan kelas 'change-button'
+                 const buttons = document.getElementsByClassName('change-button');
+     
+                 // Daftar teks yang akan ditampilkan
+                 const texts = [ 
+                     "Wat is Delete???",
+                     "Delete adalah menghapus",
+                     "Perintah DELETE ini digunakan untuk menghapus data dari satu atau lebih tabel dalam basis data ",
+                     "Klausa Delete ini bisa digunakan bersama klausa operator lainnya selain yang ada pada contoh di sini",
+                     "Monggo diliat dibawah ya"
+                 ];
+                 let clickCount = 0;
+     
+                 // Menambahkan event listener untuk menangani klik pada tombol
+                 // Mengakses tombol pertama dalam koleksi (karena Anda mungkin hanya memiliki satu tombol dengan kelas tersebut)
+                 buttons[0].addEventListener('click', function() {
+                     clickCount++;
+                     const newText = texts[clickCount % texts.length];
+                     // Mengubah isi dari semua elemen dengan kelas 'change-text'
+                     for (let i = 0; i < textElements.length; i++) {
+                         textElements[i].textContent = newText;
+                     }
+                 });
+             });
+         </script>
+</head>
+<body>
+    <div class="port">
+        <button class="button-port">Delete</button>
+    </div>
+
+    <div class="container2">
+        <div class="left-desc">
+            <img src="../img/teacher9.png" class="img-content">
+        </div>
+        <div class="right-desc">
+            <div class="judul-penjelasan">
+                <p>Deleteeeeeeeee</p>
+            </div>
+            <div class="penjelasan">
+                <p class="change-text">Wat is Delete???
+                </p>
+
+                <button class="change-button">></button>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="body-main-content">
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/Delete/del1.png">        
+                <img src="../img/dml/Delete/del1h.png">        
+            </div>
+    
+            <div class="materi-penj-content">
+              <p>Pada contoh query ini, semua data yang berada di tabel penggunaan akan dihapus</p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/Delete/del2.png">
+                <img src="../img/dml/Delete/delh2.png">
+            </div>
+            <div class="materi-penj-content">
+              <p>Di contoh query yang ada pada gambar</p>
+              <p>Data yang dihapus hanya data yang sesuai dengan kondisi yang akan dihapus</p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="other-content">    
+        <div class="judul-other-content">
+            <p>Materi-Materi Yang Berhubungan</p>
+        </div>
+        <div class="inside-main-content">
+          <div class="sub-main-content">
+            <a href="../dml/where.html"><img src="../img/dml/where.png" class="img-content2"></a>
+            <p>WHERE</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/and.html"><img src="../img/dml/and.png" class="img-content2"></a>
+            <p>AND</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/or.html"><img src="../img/dml/or.png" class="img-content2"></a>
+            <p>OR</p>
+          </div>
+          <div class="sub-main-content">
+            <a href="../dml/operator.html"><img src="../img/dml/operator.png" class="img-content2"></a>
+            <p>OPERATOR</p>
+          </div>
+        </div>   
+      </div>
+
+
+
+</body>
+</html>

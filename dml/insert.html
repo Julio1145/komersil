@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert</title>
+    <link rel="stylesheet" href="../style.css">
+    <script>
+ document.addEventListener('DOMContentLoaded', function() {
+            // Mendapatkan elemen-elemen dengan kelas 'change-text'
+            const textElements = document.getElementsByClassName('change-text');
+            // Mendapatkan elemen-elemen dengan kelas 'change-button'
+            const buttons = document.getElementsByClassName('change-button');
+
+            // Daftar teks yang akan ditampilkan
+            const texts = [ 
+                "Insert",
+                "Memasukkan",
+                "Jadi pada intinya kegunaan INSERT itu untuk memasukkan data ke dalam tabel yang ada di dalam database yang sudah dibuat sama kamu",
+                "Monggo diliat dibawah ya paduka raja"
+            ];
+            let clickCount = 0;
+
+            // Menambahkan event listener untuk menangani klik pada tombol
+            // Mengakses tombol pertama dalam koleksi (karena Anda mungkin hanya memiliki satu tombol dengan kelas tersebut)
+            buttons[0].addEventListener('click', function() {
+                clickCount++;
+                const newText = texts[clickCount % texts.length];
+                // Mengubah isi dari semua elemen dengan kelas 'change-text'
+                for (let i = 0; i < textElements.length; i++) {
+                    textElements[i].textContent = newText;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="port">
+        <button class="button-port">Insert</button>
+    </div>
+
+    <div class="container2">
+        <div class="left-desc">
+            <img src="../img/teacher6.png" class="img-content">
+        </div>
+        <div class="right-desc">
+            <div class="judul-penjelasan">
+                <p>Insert?!?!?!!?!</p>
+            </div>
+            <div class="penjelasan">
+                <p class="change-text">Yaaaaaa... Insert</p>
+
+                <button class="change-button">></button>
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="body-main-content">
+        <div class="materi-content">
+            <div class="materi-pic-content">
+                <img src="../img/dml/Insert/in1.png">        
+                <img src="../img/dml/Insert/inh1.png">        
+            </div>
+    
+            <div class="materi-penj-content">
+              <p>Ini adalah contoh <b>INSERT</b> jika mendeklarasikan kolom</p>
+              <p>Perintah nya adalah untuk memasukkan data ke tabel <b>kendaraan</b> sesuai dengan kolom yang sudah di deklarasikan </p>
+            </div>
+        </div>
+
+        <div class="materi-content">
+          <div class="materi-pic-content">
+              <img src="../img/dml/Insert/in2.png">        
+              <img src="../img/dml/Insert/inh2.png">        
+          </div>
+  
+          <div class="materi-penj-content">
+            <p>Untuk melakukan <b>INSERT</b> data juga bisa dengan tidak mendeklarasikan kolom</p>
+            <p>Tetapi kamu tetap harus memasukkan data dengan urutan kolom yang tepat</p>
+          </div>
+      </div>
+
+      <div class="materi-content">
+        <div class="materi-pic-content">
+            <img src="../img/dml/Insert/in3.png">        
+            <img src="../img/dml/Insert/inH3.jpeg">        
+        </div>
+
+        <div class="materi-penj-content">
+          <p>Contoh disamping diperuntukkan untuk memasukkan data yang banyak sekaligus tanpa mendeklarasikan kolom terlebih dahulu</p>
+          <p>Dengan tidak mendeklarasikan kolom, kamu harus perhatian dalam memasukkan data yang tepat sesuai urutan yang ada di dalam tabel</p>
+          <p>Kamu juga tentu bisa mendeklarasikan kolom terlebih dahulu seperti contoh pertama</p>
+        </div>
+    </div>
+
+    <div class="materi-content">
+      <div class="materi-pic-content">
+          <p>INFORMASI TAMBAHAN</p>
+          <p>>></p>      
+      </div>
+
+      <div class="materi-penj-content">
+          <p>Jika ada data yang bersifat NULL, maka tuliskan NULL saja</p>
+          <p>Untuk melakukan INSERT tipe data date, gunakan format </p>
+          <p><b>TAHUN-BULAN-TANGGAL</b></p>
+          <br>
+          <p>Untuk melakukan INSERT tipe data datetime, gunakan format</p>
+          <p><b>TAHUN-BULAN-TANGGAL</b> <b>JAM-MENIT-DETIK</b></p>
+          <p>YYYY-MM-DD | HH-MM-SS</p>
+      </div>
+  </div>
+    </div>
+
+    <div class="other-content">    
+        <div class="judul-other-content">
+            <p>Materi-Materi Yang Berhubungan</p>
+        </div>
+    </div>
+</body>
+</html>
