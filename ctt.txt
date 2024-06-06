@@ -1,0 +1,14 @@
+Tambahkan Gaji di supir dan penanggung_jawab -done
+
+List hasil yang dibutuhkan dari query:
+1. op11 ( Operator )
+2. in3 ( Insert )
+3. ag1 ( Agregator )
+4. l6-7 ( LIKE )
+5. and ( ALL AND )
+6. gr1 ( GROUP )
+7. Delete ( ALL )
+8. Order ( ALL )
+9. Or ( ALL )
+10. Up2 & 3 ( Update)
+--------

@@ -1,0 +1,14 @@
+List Page Done:
+1. Select
+2, Agregator ( really near done)
+3. And (Near Done)
+4. Group (Half Done)
+5. Insert ( really near done)
+6. Operator
+7. Like
+8. Delete ( really near done)
+9. OR ( Sisa Foto Semua )
+10. Order ( Sisa Foto )
+11. Update ( Sisa Foto )
+-----
+12. Where 
